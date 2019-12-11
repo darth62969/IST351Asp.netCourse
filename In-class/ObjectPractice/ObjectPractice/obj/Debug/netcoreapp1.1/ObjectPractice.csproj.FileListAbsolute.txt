@@ -1,0 +1,3 @@
+C:\Users\fuck off\OneDrive\IST351 Spring 2018\In-class\ObjectPractice\ObjectPractice\obj\Debug\netcoreapp1.1\ObjectPractice.csproj.CoreCompileInputs.cache
+C:\Users\fuck off\OneDrive\IST351 Spring 2018\In-class\ObjectPractice\ObjectPractice\obj\Debug\netcoreapp1.1\ObjectPractice.AssemblyInfoInputs.cache
+C:\Users\fuck off\OneDrive\IST351 Spring 2018\In-class\ObjectPractice\ObjectPractice\obj\Debug\netcoreapp1.1\ObjectPractice.AssemblyInfo.cs

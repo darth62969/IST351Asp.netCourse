@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<ShareTubeAuth.Models.Post>
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+<div class="feed">
+    <div class="post">
+        <h1 class="post-title">this is a test</h1>
+        <p class="content">this is some test content lets see if this works.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BhV_SOlK6dk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <!--
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Content" class="control-label"></label>
+                    <input asp-for="Content" class="form-control" />
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Video" class="control-label"></label>
+                    <input asp-for="Video" class="form-control" />
+                    <span asp-validation-for="Video" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DatePosted" class="control-label"></label>
+                    <input asp-for="DatePosted" class="form-control" />
+                    <span asp-validation-for="DatePosted" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>-->
+    @if (Model == null)
+    {<p> Model is Null</p>}
+    @if (Model != null)
+    {
+    @foreach (var item in Model)
+    { 
+            <div class="post">
+                <h1>
+                    @Html.DisplayFor(modelItem => item.ApplicationUser.UserName)
+                </h1>
+                <p class="content">
+                    @Html.DisplayFor(modelItem => item.Content)}
+                </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/@Html.DisplayFor(modelItem => item.Video)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            }
+     }
+        </div>

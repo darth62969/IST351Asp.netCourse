@@ -1,0 +1,11 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Home Page";
+}
+
+<table>
+    @foreach (var x in Request.ServerVariables)
+    {
+        <tr><th>@x.ToString()</th><th>@Request[x.ToString()]</th></tr>
+    }
+</table>
